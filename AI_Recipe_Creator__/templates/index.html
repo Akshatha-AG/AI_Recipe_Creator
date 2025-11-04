@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Recipe Creator</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        textarea {
+            width: 60%;
+            height: 100px;
+            border-radius: 8px;
+            padding: 10px;
+        }
+        button {
+            background-color: #00ff99;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .recipe-box {
+            margin-top: 30px;
+            background: #1f1f1f;
+            border-radius: 12px;
+            padding: 20px;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>🍳 AI Recipe Creator</h1>
+    <form method="POST">
+        <textarea name="ingredients" placeholder="Enter ingredients (e.g. eggs, tomato, cheese)" required></textarea><br>
+        <button type="submit">Generate Recipe</button>
+    </form>
+
+    {% if recipe %}
+    <div class="recipe-box">
+        <h2>Generated Recipe:</h2>
+        <p>{{ recipe }}</p>
+    </div>
+    {% endif %}
+</body>
+</html>
